@@ -1,3 +1,5 @@
+
+
 function getComputerChoice(){
     var aleatoire = Math.floor(Math.random() * 3) + 1;
     var computerChoise = '';
@@ -42,30 +44,66 @@ function rockPaperScissors(playerSelectionet, computerSelection){
         }
     }
 }
+
+
 function game() {
+    const result = document.createElement('div');
+    const container = document.querySelector('.container');
+    container.appendChild(result);
+    const score = document.createElement('div');
+    container.appendChild(score);
+    const finalResult = document.createElement('div');
+    container.appendChild(finalResult);
+    const reset = document.createElement('button');
+    container.appendChild(reset);
+    reset.textContent =  'reset';
     let playerPoint = 0;
     let computerPoint = 0;
-    let playerChoice = '';
-    let computerChoise = '';
-    let game = '';
-    for (let index = 0; index < 5; index++) {
-        playerChoice = prompt('Choose inter (rock, paper, scissors) : ');
-        computerChoise = getComputerChoice();
-        game = rockPaperScissors(playerChoice, computerChoise);
-        console.log(game);
-        if (game.includes('You win')){
-            playerPoint++;
+    let cpt = 0;
+  
+    function play(playerChoice) {
+      const computerChoice = getComputerChoice();
+      const gameResult = rockPaperScissors(playerChoice, computerChoice);
+  
+      if (gameResult.includes('You win')) {
+        playerPoint++;
+      }
+      if (gameResult.includes('Lose')) {
+        computerPoint++;
+      }
+      
+      result.textContent = gameResult;
+      cpt++;
+      score.textContent = `Player ${playerPoint} - ${computerPoint} Computer`;
+  
+      if (cpt === 5) {
+        // Vérifier le gagnant ou effectuer d'autres actions lorsque cpt est égal à 5
+        if (playerPoint > computerPoint) {
+          finalResult.textContent = `You win (${playerPoint}-${computerPoint})`;
+          finalResult.style.color = 'green';
+        } else if (playerPoint < computerPoint) {
+          finalResult.textContent = `You Lose (${playerPoint}-${computerPoint})`;
+          finalResult.style.color = 'red';
+        } else {
+          finalResult.textContent = `No one win! (${playerPoint}-${computerPoint})`;
         }
-        if (game.includes('Lose')){
-            computerPoint++;
-        }
+        
+        // Masquer les boutons
+        document.querySelectorAll('.choice').forEach(button => {
+          button.style.display = 'none';
+        });
+      }
     }
-    if (playerPoint > computerPoint) {
-        return `You win (${playerPoint}-${computerPoint})`;
-    }else if (playerPoint < computerPoint){
-        return `You Lose (${playerPoint}-${computerPoint})`;
-    }else{
-        return `No one win! (${playerPoint}-${computerPoint})`;
-    }
+  
+    document.querySelectorAll('.choice').forEach(button => {
+      button.addEventListener('click', () => {
+        play(button.id);
+      });
+    });
+    reset.addEventListener('click', () =>{
+        location.reload();
+    });
 }
-console.log(game());
+  
+
+game();

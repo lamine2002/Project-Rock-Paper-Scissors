@@ -1,0 +1,113 @@
+// function game() {
+//     const result = document.createElement('div');
+//     const container = document.querySelector('.container');
+//     container.appendChild(result);
+//     const score = document.createElement('div');
+//     container.appendChild(score);
+//     const finalResult = document.createElement('div');
+//     container.appendChild(finalResult);
+//     let playerPoint = 0;
+//     let computerPoint = 0;
+//     let playerChoice = '';
+//     let computerChoise = '';
+//     let game = '';
+//     let cpt = 0;
+//     const btnRock = document.querySelector('#rock');
+//     btnRock.addEventListener('click', () =>{
+//         playerChoice = 'rock';
+//         computerChoise = getComputerChoice();
+//         game = rockPaperScissors(playerChoice, computerChoise);
+//         if (game.includes('You win')){
+//             playerPoint++;
+//         }
+//         if (game.includes('Lose')){
+//             computerPoint++;
+//         }
+//         result.textContent = game;
+//         cpt++;
+//         score.textContent = `Player ${playerPoint} - ${computerPoint} Computer`;
+//         if (cpt === 5) {
+//             // Vérifier le gagnant ou effectuer d'autres actions lorsque cpt est égal à 5
+//             if (playerPoint > computerPoint) {
+//                 finalResult.textContent =  `You win (${playerPoint}-${computerPoint})`;
+//                 finalResult.style.color = 'green';
+//             }else if (playerPoint < computerPoint){
+//                 finalResult.textContent =  `You Lose (${playerPoint}-${computerPoint})`;
+//                 finalResult.style.color = 'red';
+//             }else{
+//                 finalResult.textContent =  `No one win! (${playerPoint}-${computerPoint})`;
+//             }
+//             // Masquer les boutons
+//             btnRock.style.display = 'none';
+//             btnPaper.style.display = 'none';
+//             btnScissors.style.display = 'none';
+//           }
+//     });
+//     const btnPaper = document.querySelector('#paper');
+//     btnPaper.addEventListener('click', () =>{
+//         playerChoice = 'paper';
+//         computerChoise = getComputerChoice();
+//             game = rockPaperScissors(playerChoice, computerChoise);
+        
+//         if (game.includes('You win')){
+//             playerPoint++;
+//         }
+//         if (game.includes('Lose')){
+//             computerPoint++;
+//         }
+//         result.textContent = game;
+//         cpt++;
+//         score.textContent = `Player ${playerPoint} - ${computerPoint} Computer`;
+//         if (cpt === 5) {
+//             // Vérifier le gagnant ou effectuer d'autres actions lorsque cpt est égal à 5
+//             if (playerPoint > computerPoint) {
+//                 finalResult.textContent =  `You win (${playerPoint}-${computerPoint})`;
+//                 finalResult.style.color = 'green';
+//             }else if (playerPoint < computerPoint){
+//                 finalResult.textContent =  `You Lose (${playerPoint}-${computerPoint})`;
+//                 finalResult.style.color = 'red';
+//             }else{
+//                 finalResult.textContent =  `No one win! (${playerPoint}-${computerPoint})`;
+//             }
+//             // Masquer les boutons
+//             btnRock.style.display = 'none';
+//             btnPaper.style.display = 'none';
+//             btnScissors.style.display = 'none';
+//           }
+//     });
+//     const btnScissors = document.querySelector('#scissors');
+//     btnScissors.addEventListener('click', () =>{
+//         playerChoice = 'scissors';
+//         computerChoise = getComputerChoice();
+//         game = rockPaperScissors(playerChoice, computerChoise);
+        
+//         if (game.includes('You win')){
+//             playerPoint++;
+//         }
+//         if (game.includes('Lose')){
+//             computerPoint++;
+//         }
+//         result.textContent = game;
+//         cpt++;
+//         score.textContent = `Player ${playerPoint} - ${computerPoint} Computer`;
+//         if (cpt === 5) {
+//             // Vérifier le gagnant ou effectuer d'autres actions lorsque cpt est égal à 5
+//             if (playerPoint > computerPoint) {
+//                 finalResult.textContent =  `You win (${playerPoint}-${computerPoint})`;
+//                 finalResult.style.color = 'green';
+//             }else if (playerPoint < computerPoint){
+//                 finalResult.textContent =  `You Lose (${playerPoint}-${computerPoint})`;
+//                 finalResult.style.color = 'red';
+//             }else{
+//                 finalResult.textContent =  `No one win! (${playerPoint}-${computerPoint})`;
+//             }
+//             // Masquer les boutons
+//             btnRock.style.display = 'none';
+//             btnPaper.style.display = 'none';
+//             btnScissors.style.display = 'none';
+//           }
+//     });
+    
+    
+    
+    
