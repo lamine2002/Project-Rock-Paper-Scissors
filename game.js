@@ -54,8 +54,7 @@ function game() {
     container.appendChild(score);
     const finalResult = document.createElement('div');
     container.appendChild(finalResult);
-    const reset = document.createElement('button');
-    container.appendChild(reset);
+    
     reset.textContent =  'reset';
     let playerPoint = 0;
     let computerPoint = 0;

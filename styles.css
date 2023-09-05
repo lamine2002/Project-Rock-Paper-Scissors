@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.game {
+    display: flex;
+    justify-content: space-around;
+}
+
+.player, .computer {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.choice {
+    font-size: 18px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.result, .computer-choice {
+    margin-top: 20px;
+}
+
+#game-result {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#score {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+#reset {
+    background-color: #ff6347;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.final-result {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+    .game {
+        flex-direction: column;
+        align-items: center;
+    }
+    .player, .computer {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

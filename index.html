@@ -1,17 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Rock Paper Scisor</title>
+    <link rel="stylesheet" href="styles.css">
+    <title>Pierre Papier Ciseaux</title>
 </head>
 <body>
     <div class="container">
-        <button id="rock" class="choice">Rock</button>
-        <button id="paper" class="choice">Paper</button>
-        <button id="scissors" class="choice">Scissors</button>
+        <h1>Pierre Papier Ciseaux</h1>
+        <div class="game">
+            <div class="player">
+                <h2>Joueur</h2>
+                <button id="rock" class="choice">Pierre</button>
+                <button id="paper" class="choice">Papier</button>
+                <button id="scissors" class="choice">Ciseaux</button>
+            </div>
+            <div class="result">
+                <h2>Résultat</h2>
+                <div id="game-result"></div>
+                <div id="score"></div>
+                <button id="reset">Réinitialiser</button>
+            </div>
+            <div class="computer">
+                <h2>Ordinateur</h2>
+                <div class="computer-choice" id="computer-choice"></div>
+            </div>
+        </div>
+        <div class="final-result" id="final-result"></div>
     </div>
     <script src="game.js"></script>
 </body>
